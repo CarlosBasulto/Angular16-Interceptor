@@ -1,9 +1,12 @@
 # Angular16-Interceptor 
  Ejemplos de 3 interceptor en Angular 16
 
-
+\n
+\n
 En Angular, l**os interceptores de solicitudes HTTP son una característica poderosa que permite al desarrollador manipular las solicitudes HTTP** y las respuestas antes de que lleguen a los controladores de solicitudes o después de que salgan de ellos. Los interceptores se implementan como servicios y se utilizan para realizar tareas comunes, como agregar encabezados a las solicitudes, manipular errores, modificar solicitudes o respuestas, y más.
 
+\n
+\n
 **Características clave de los interceptores HTTP en Angular:**
 Implementación como Servicio:
 Los interceptores se implementan como servicios que extienden la interfaz HttpInterceptor. Esto implica la implementación del método intercept().
@@ -14,6 +17,8 @@ Los interceptores permiten la manipulación tanto de las solicitudes antes de se
 Uso común:
 Los interceptores son útiles para tareas como agregar encabezados de autenticación, manejar errores globales, modificar solicitudes o respuestas, y otras tareas de manejo global.
 
+\n
+\n
 
 **Interceptores más comunes en Angular:**
 HttpInterceptor: Es la interfaz principal que los interceptores deben implementar. Proporciona dos métodos, intercept y interceptResponse, que permiten manipular las solicitudes y respuestas HTTP respectivamente.
