@@ -41,8 +41,12 @@ HttpTokenInterceptor: Agrega tokens de autenticación a las solicitudes HTTP. Pu
 
 HttpErrorHandlingInterceptor: Maneja errores HTTP específicos y toma decisiones basadas en el código de estado. Puede ser utilizado para redirigir a páginas de error personalizadas o realizar acciones específicas según el tipo de error.
 
++++++++++++++++++++++++++++++++++++++++++++++
 
 Además, conocerás una funcionalidad avanzada, para crear interceptos personalizados en servicios personalizados, cubriendo una parte importante, ya que en el ejemplo, podrás crear un interceptor personalizado para una llamada en concreto y no aplicarse de forma global a todo el proyecto de Angular.
+
+
+Ejemplo de como crear interceptor personalizados y no globales en tu aplicación de angular. Podrás asignar o modificar llamadas Http en función de un servicio o componente, sin tener que hacerlo de forma global.
 
 
 
