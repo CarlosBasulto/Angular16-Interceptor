@@ -11,7 +11,7 @@ export class CustomInterceptor implements HttpInterceptor {
 
     const modifiedReq = req.clone({
       headers: new HttpHeaders({
-        'Custom-Header222222222222222222222': 'custom-value2222222222222',
+        'Custom-HeaderExclusiva': 'custom-valueExclusivo',
         // Agrega otras cabeceras según sea necesario
       }),
     });
@@ -24,7 +24,7 @@ export class CustomInterceptor implements HttpInterceptor {
   // Método para obtener las cabeceras personalizadas
   getHeaders(): HttpHeaders {
     return new HttpHeaders({
-      'Custom-Headera': 'custom-value22222222222222222',
+      'Custom-HeaderExclusiva': 'custom-valueExclusivo',
       // Agrega otras cabeceras según sea necesario
     });
   }
