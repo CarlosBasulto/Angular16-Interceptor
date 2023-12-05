@@ -8,10 +8,22 @@ import { CustomHttpClientService } from './custom-http-client.service.ts.service
   selector: 'app-root',
   template: `
     <div>
-      <h2>Data from API 1, llamada base</h2>
-      <pre>{{ data | json }}</pre>
-      <button (click)="fetchData2()">Fetch Data 2</button>
-      <button (click)="fetchData3()">Fetch Data 2</button>
+      <h2>Interceptor Globales y Customizados</h2>
+     
+      <button (click)="fetchData2()">Llamadas HTTP con Interceptor Globales</button>
+      <button (click)="fetchData3()">Llamadas Http con interceptor Customizado</button>
+
+<h5>Recuerda abrir el inspector de código para analaizar las cabeceras y ver las diferencias</h5>
+
+
+<h4> Respuesta de la llamada API</h4>
+
+<div style="backgroung-color:black">
+
+<pre>{{ data | json }}</pre>
+</div>
+
+
     </div>
   `,
   styleUrls: ['./app.component.scss']
