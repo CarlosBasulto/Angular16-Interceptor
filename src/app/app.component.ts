@@ -43,9 +43,25 @@ export class AppComponent implements OnInit {
   constructor(private dataService: DataService,private customHttpClient: CustomHttpClientService) {}
 
   ngOnInit() {
+
+    this.fetchData();
+
+
+    
+  }
+
+
+
+  fetchData() {
+
+
     this.dataService.fetchData().subscribe((response) => {
+      this.lastHeaders = response.headers;
       this.data = response;
+      
     });
+
+
   }
 
   fetchData2() {
@@ -65,6 +81,7 @@ export class AppComponent implements OnInit {
 //Clonarlo y añadir nuevas cabeceras
     this.customHttpClient.getCloneAdd('https://jsonplaceholder.typicode.com/todos/4').subscribe((response) => {
       this.data = response;
+      this.lastHeaders = this.customHttpClient.getLastHeaders();
     });
   }
 }
