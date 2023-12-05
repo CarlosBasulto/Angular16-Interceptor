@@ -24,7 +24,7 @@ export class CustomInterceptor implements HttpInterceptor {
   // Método para obtener las cabeceras personalizadas
   getHeaders(): HttpHeaders {
     return new HttpHeaders({
-      'Custom-HeaderExclusiva': 'custom-valueExclusivo',
+      'Custom-HeaderExclusivaxxxxxxxxxxxxxxxx': 'custom-valuexxxxxxxxxxxxxxxxx',
       // Agrega otras cabeceras según sea necesario
     });
   }
