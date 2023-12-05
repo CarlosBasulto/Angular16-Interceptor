@@ -15,12 +15,15 @@ export class DataService {
 
   constructor(private http: HttpClient) {}
 
-  fetchData(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  fetchData(): Observable<HttpResponse<any>> {
+    return this.http.get<any>(this.apiUrl, { observe: 'response' });
+ 
+    //return this.http.get(this.apiUrl);
   }
 
 
   getLastHeaders(): HttpHeaders | null {
+    
     return this.lastHeaders;
   }
 }
