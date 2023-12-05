@@ -13,6 +13,8 @@ import { CustomHttpClientService } from './custom-http-client.service.ts.service
       <button (click)="fetchData2()">Llamadas HTTP con Interceptor Globales</button>
       <button (click)="fetchData3()">Llamadas Http con interceptor Customizado</button>
 
+
+      <h5>Usa F5 entre llamada y llamada para que sean independientes. En breve subimos un ejemplo más completo</h5>
 <h5>Recuerda abrir el inspector de código para analaizar las cabeceras y ver las diferencias</h5>
 
 
