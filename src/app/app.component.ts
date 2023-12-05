@@ -10,12 +10,19 @@ import { CustomHttpClientService } from './custom-http-client.service.ts.service
     <div>
       <h2>Interceptor Globales y Customizados</h2>
      
-      <button (click)="fetchData2()">Llamadas HTTP con Interceptor Globales</button>
+    <h3>Al cargar está página hace las llamadas con los interceptor globales</h3>
+
       <button (click)="fetchData3()">Llamadas Http con interceptor Customizado</button>
 
 
       <h5>Usa F5 entre llamada y llamada para que sean independientes. En breve subimos un ejemplo más completo</h5>
 <h5>Recuerda abrir el inspector de código para analaizar las cabeceras y ver las diferencias</h5>
+
+<h4>Cabeceras de la última llamada</h4>
+      <div style="background-color: darkblue">
+        <pre>{{ lastHeaders | json }}</pre>
+      </div>
+
 
 
 <h4> Respuesta de la llamada API</h4>
@@ -32,7 +39,7 @@ import { CustomHttpClientService } from './custom-http-client.service.ts.service
 })
 export class AppComponent implements OnInit {
   data: any;
-
+ lastHeaders: any;
   constructor(private dataService: DataService,private customHttpClient: CustomHttpClientService) {}
 
   ngOnInit() {
@@ -45,6 +52,8 @@ export class AppComponent implements OnInit {
    
     this.customHttpClient.get('https://jsonplaceholder.typicode.com/todos/4').subscribe((response) => {
       this.data = response;
+      this.lastHeaders = this.customHttpClient.getLastHeaders();
+      
     });
   }
 
@@ -52,18 +61,6 @@ export class AppComponent implements OnInit {
   fetchData3() {
    
 
-
-/*
-
-const modifiedReq = req.clone({
-      setHeaders: {
-        'Custom-Header': 'Interceptor Example',
-        'Otra': 'OtraCabecera'
-      }
-    });
-
-
- */
 
 //Clonarlo y añadir nuevas cabeceras
     this.customHttpClient.getCloneAdd('https://jsonplaceholder.typicode.com/todos/4').subscribe((response) => {
